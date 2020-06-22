@@ -1,4 +1,4 @@
-FROM komodocakeshop/dev-komodo-allinone:0.4.0a
+FROM coingateways/dev-komodo:5000f2a
 RUN apt-get update && \
     apt-get -y install \
     dialog \
