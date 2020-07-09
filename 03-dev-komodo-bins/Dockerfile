@@ -29,7 +29,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 #RUN wget https://github.com/KomodoPlatform/komodo/releases/download/dev-multios-0.4.0a-alpha/linux_0.4.0a.tar.gz
 RUN wget https://github.com/KomodoPlatform/komodo/releases/download/cd_release_5000f2a_dev/komodo_5000f2a_dev_linux.zip
-RUN unzip komodo_5000f2a_dev_linux.zip
-RUN ln -sf /linux64/komodod /usr/local/bin
-RUN ln -sf /linux64/komodo-cli /usr/local/bin
+RUN unzip komodo_5000f2a_dev_linux.zip && \
+ mv komodod /usr/local/bin && \
+ mv komodo-cli /usr/local/bin
 CMD ["/bin/bash"]
