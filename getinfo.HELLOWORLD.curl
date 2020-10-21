@@ -1,0 +1,5 @@
+#!/bin/bash
+rpcuser=user4130001545
+rpcpassword=pass26cc5f967a6c9e7c7dd35675429b5f6257f5b7f1a87a7f762bd4fba3553401075e
+rpcport=8096
+curl -s --user $rpcuser:$rpcpassword --data-binary "{\"jsonrpc\": \"1.0\", \"id\": \"curltest\", \"method\": \"getinfo\", \"params\": []}" -H 'content-type: text/plain;' http://127.0.0.1:$rpcport/
